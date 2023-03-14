@@ -20,9 +20,9 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backdropViewURL = URL(string: self.imageBaseURL+movie.backdropPath)
-        let votesAverageString = "Votes Average: "+String(movie.voteAverage)
-        let votesString = "Votes: "+String(movie.voteCount)
+        let backdropViewURL = URL(string: self.imageBaseURL+movie.backdrop_path)
+        let votesAverageString = "Votes Average: "+String(movie.vote_average)
+        let votesString = "Votes: "+String(movie.vote_count)
         let popularityString = "Popularity: "+String(movie.popularity)
         Nuke.loadImage(with: backdropViewURL!, into: backdropView)
         
@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         overviewLabel.text = movie.overview
         votesLabel.text = votesString
         voteAverageLabel.text = votesAverageString
-        popularityLabel.text = popularityString 
+        popularityLabel.text = popularityString
         
         
         

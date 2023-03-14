@@ -29,7 +29,7 @@ class MovieTableViewCell: UITableViewCell {
     func configure(with movie: Movie) {
         titleLabel.text = movie.title
         overviewLabel.text = movie.overview
-        let posterViewURL = URL(string: self.imageBaseURL+movie.posterPath)
+        let posterViewURL = URL(string: self.imageBaseURL+movie.poster_path)
         Nuke.loadImage(with: posterViewURL!, into: posterView)
 
         // Load image async via Nuke library image loading helper method
